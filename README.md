@@ -163,19 +163,19 @@
 
 ## Estrutura do projeto
 
-- `Front/Pages`: telas HTML (login, início, cadastro de discos e gestão de acervo).
-- `Front/Script`: JavaScript separado por tela.
-- `Front/Style`: CSS no tema escuro roxo, seguindo a estilização original do projeto.
-- `Back`: API Express, controllers, rotas e Prisma.
+- `web/Pages`: telas HTML (login, início, cadastro de discos e gestão de acervo).
+- `web/Script`: JavaScript separado por tela.
+- `web/Style`: CSS no tema escuro roxo, seguindo a estilização original do projeto.
+- `api`: API Express, controllers, rotas e Prisma.
 
 ## Como executar
 
-1. Configure as variáveis de banco de dados exigidas pelo Prisma no arquivo `.env` dentro de `Back` (use `.env.example` como referência).
-2. No terminal, entre em `Back` e execute:
+1. Configure as variáveis de banco de dados exigidas pelo Prisma no arquivo `.env` dentro de `api` (use `.env.example` como referência).
+2. No terminal, entre em `api` e execute:
    ``` cmd
    npm install
    npx prisma generate
    npx prisma migrate dev
    npm run dev
    ```
-3. Abra `Front/index.html` no navegador. 
+3. Abra `web/index.html` no navegador. 
