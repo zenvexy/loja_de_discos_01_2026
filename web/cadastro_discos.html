@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja de Discos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Discos</h1>
+        <span>Olá, <strong id="nome-usuario"></strong></span>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="gestao.html">Gestão de Discos</a>
+        <button class="btn-logout" id="btn-logout">Sair</button>
+    </nav>
+    <main>
+        <div class="form-card">
+            <h3 id="form-titulo" onclick="novoDisco()">Novo Disco</h3>
+            <input type="hidden" id="disco-id">
+            <div class="form-group">
+                <label>Título</label>
+                <input type="text" id="disco-titulo" placeholder="Ex: Disco de Jazz">
+            </div>
+            <div class="form-group">
+                <label>Artista</label>
+                <input type="text" id="disco-artista" placeholder="Ex: John Coltrane">
+            </div>
+            <div class="form-group">
+                <label>Gênero</label>
+                <input type="text" id="disco-genero" placeholder="Ex: Jazz">
+            </div>
+            <div class="form-group">
+                <label>Custo (R$)</label>
+                <input type="number" id="disco-custo" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <div class="form-group">
+                <label>Preço de Venda (R$)</label>
+                <input type="number" id="disco-preco" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <div class="form-group">
+                <label>Quantidade em Estoque</label>
+                <input type="number" id="disco-quantidade" min="0" placeholder="0">
+            </div>
+            <div class="form-group">
+                <label>Estoque Mínimo</label>
+                <input type="number" id="disco-estoque-minimo" min="0" placeholder="0">
+            </div>
+            <button class="btn-success" id="btn-salvar" onclick="salvarDisco()">Salvar Disco</button>
+            <button class="btn-danger" id="btn-cancelar-edicao" onclick="cancelarEdicao()">Cancelar Edição</button>
+        </div>
+
+        <h3 class="section-title">Discos Cadastrados</h3>
+        <div class="toolbar">
+            <input type="text" id="input-busca" placeholder="Buscar disco por título...">
+            <button class="btn-primary" id="btn-buscar" onclick="buscarDiscos()">Buscar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Artista</th>
+                    <th>Gênero</th>
+                    <th>Custo (R$)</th>
+                    <th>Preço de Venda (R$)</th>
+                    <th>Qtd.</th>
+                    <th>Estoque Mín.</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-discos"></tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
