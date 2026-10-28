@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Discos</title>
+    <link rel="stylesheet" href="../Style/gestao.css">
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Gestão de Discos</h1>
+        <span>Olá, <strong id="nome-usuario"></strong></span>
+    </header>
+    <nav class="navegacao">
+        <a href="home.html">Home</a>
+        <a href="cadastro_disco.html">Cadastro de Discos</a>
+        <button class="btn-logout" id="btn-logout">Sair</button>
+    </nav>
+    <main class="conteudo">
+        <div class="form-card">
+            <h3 id="form-movimentacao-titulo" onclick="novaMovimentacao()">Nova Movimentação</h3>
+            <input type="hidden" id="movimentacao-id">
+
+            <div class="form-group">
+                <label for="select-disco">Disco</label>
+                <select id="select-disco" required>
+                    <option value="">Carregando discos...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select-tipo">Tipo de movimentação</label>
+                <select id="select-tipo" required>
+                    <option value="entrada">Reposição (Entrada)</option>
+                    <option value="saida">Venda (Saída)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-quantidade">Quantidade</label>
+                <input type="number" id="input-quantidade" min="1" value="1">
+            </div>
+
+            <div class="form-group">
+                <label for="input-data">Data da Movimentação</label>
+                <input type="date" id="input-data">
+            </div>
+
+            <div class="form-group">
+                <label for="input-observacao">Observação</label>
+                <textarea id="input-observacao" placeholder="Ex.: reposição de estoque, venda realizada..." rows="3"
+                    maxlength="500"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="select-usuario">Usuário responsável</label>
+                <select id="select-usuario" required>
+                    <option value="">Carregando usuários...</option>
+                </select>
+            </div>
+            <button class="btn-success" id="btn-registrar">Registrar</button>
+            <button class="btn-danger" id="btn-cancelar-edicao-movimentacao">Cancelar Edição</button>
+        </div>
+
+        <h2 class="section-title">Movimentações (ordem alfabética por disco)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Disco</th>
+                    <th>Tipo</th>
+                    <th>Quantidade</th>
+                    <th>Observação</th>
+                    <th>Usuário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-movimentacoes"></tbody>
+        </table>
+    </main>
+
+    <script src="../Script/gestao.js"></script>
+</body>
+
+</html>

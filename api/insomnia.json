@@ -1,0 +1,271 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-10-28T18:13:44.634Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_Back",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "Back"
+    },
+    {
+      "_id": "fld_Usuario",
+      "_type": "request_group",
+      "parentId": "fld_Back",
+      "name": "Usuario"
+    },
+    {
+      "_id": "req_Usuario_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Usuario",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuario/listar"
+    },
+    {
+      "_id": "req_Usuario_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Usuario",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuario/buscar/:id"
+    },
+    {
+      "_id": "req_Usuario_POST",
+      "_type": "request",
+      "parentId": "fld_Usuario",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/usuario/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Usuario_PUT",
+      "_type": "request",
+      "parentId": "fld_Usuario",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/usuario/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Usuario_DELETE",
+      "_type": "request",
+      "parentId": "fld_Usuario",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/usuario/excluir/:id"
+    },
+    {
+      "_id": "fld_Disco",
+      "_type": "request_group",
+      "parentId": "fld_Back",
+      "name": "Disco"
+    },
+    {
+      "_id": "req_Disco_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Disco",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/disco/listar"
+    },
+    {
+      "_id": "req_Disco_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Disco",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/disco/buscar/:id"
+    },
+    {
+      "_id": "req_Disco_POST",
+      "_type": "request",
+      "parentId": "fld_Disco",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/disco/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_disco\": 0,\n  \"titulo\": \"string\",\n  \"artista\": \"string\",\n  \"genero\": \"string\",\n  \"preco_custo\": null,\n  \"preco_venda\": null,\n  \"quantidade_estoque\": 0,\n  \"estoque_minimo\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Disco_PUT",
+      "_type": "request",
+      "parentId": "fld_Disco",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/disco/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_disco\": 0,\n  \"titulo\": \"string\",\n  \"artista\": \"string\",\n  \"genero\": \"string\",\n  \"preco_custo\": null,\n  \"preco_venda\": null,\n  \"quantidade_estoque\": 0,\n  \"estoque_minimo\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Disco_DELETE",
+      "_type": "request",
+      "parentId": "fld_Disco",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/disco/excluir/:id"
+    },
+    {
+      "_id": "fld_MovimentacaoEstoque",
+      "_type": "request_group",
+      "parentId": "fld_Back",
+      "name": "MovimentacaoEstoque"
+    },
+    {
+      "_id": "req_MovimentacaoEstoque_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_MovimentacaoEstoque",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/movimentacaoestoque/listar"
+    },
+    {
+      "_id": "req_MovimentacaoEstoque_GET_ID",
+      "_type": "request",
+      "parentId": "fld_MovimentacaoEstoque",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/movimentacaoestoque/buscar/:id"
+    },
+    {
+      "_id": "req_MovimentacaoEstoque_POST",
+      "_type": "request",
+      "parentId": "fld_MovimentacaoEstoque",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/movimentacaoestoque/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_movimentacao\": 0,\n  \"id_disco\": 0,\n  \"id_usuario\": 0,\n  \"quantidade\": 0,\n  \"data_movimentacao\": \"2026-10-28T18:13:44.633Z\",\n  \"observacao\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_MovimentacaoEstoque_PUT",
+      "_type": "request",
+      "parentId": "fld_MovimentacaoEstoque",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/movimentacaoestoque/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_movimentacao\": 0,\n  \"id_disco\": 0,\n  \"id_usuario\": 0,\n  \"quantidade\": 0,\n  \"data_movimentacao\": \"2026-10-28T18:13:44.633Z\",\n  \"observacao\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_MovimentacaoEstoque_DELETE",
+      "_type": "request",
+      "parentId": "fld_MovimentacaoEstoque",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/movimentacaoestoque/excluir/:id"
+    }
+  ]
+}

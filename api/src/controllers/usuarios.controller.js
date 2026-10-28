@@ -1,5 +1,28 @@
 const prisma = require("../data/prisma");
 
+const login = async (req, res) => {
+    try {
+        const { email, senha } = req.body;
+        if (!email || !senha) {
+            return res.status(400).json({ erro: "Informe e-mail e senha." });
+        }
+
+        const usuario = await prisma.usuario.findUnique({ where: { email } });
+        if (!usuario || usuario.senha !== senha) {
+            return res.status(401).json({ erro: "E-mail ou senha inválidos." });
+        }
+
+        return res.status(200).json({
+            id_usuario: usuario.id_usuario,
+            nome: usuario.nome,
+            email: usuario.email
+        });
+    } catch (erro) {
+        console.error(erro);
+        return res.status(500).json({ erro: "Erro ao realizar login." });
+    }
+};
+
 const listar = async (req, res) => {
     try {
         const lista = await prisma.usuario.findMany();
@@ -75,6 +98,7 @@ const excluir = async (req, res) => {
 };
 
 module.exports = {
+    login,
     cadastrar,
     listar,
     buscar,

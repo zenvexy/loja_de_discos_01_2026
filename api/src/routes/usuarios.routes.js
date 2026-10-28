@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const controller = require("../controllers/usuarios.controller");
 
+router.post("/login", controller.login);
 router.post("/cadastrar", controller.cadastrar);
 router.get("/listar", controller.listar);
 router.get("/buscar/:id", controller.buscar);
